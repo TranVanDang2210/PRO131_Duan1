@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DU_AN_1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="BAN">
+          <Key>
+            <PropertyRef Name="maBan" />
+          </Key>
+          <Property Name="maBan" Type="nvarchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="BILL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="maBan" Type="nvarchar" MaxLength="10" />
+          <Property Name="maMon" Type="nvarchar" MaxLength="10" />
+          <Property Name="soluong" Type="int" />
+        </EntityType>
+        <EntityType Name="KHO">
+          <Key>
+            <PropertyRef Name="maNL" />
+          </Key>
+          <Property Name="maNL" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="tenNL" Type="nvarchar" MaxLength="50" />
+          <Property Name="soluong" Type="nvarchar" MaxLength="10" />
+          <Property Name="gia" Type="nvarchar" MaxLength="20" />
+          <Property Name="ngayNhap" Type="nvarchar" MaxLength="50" />
+          <Property Name="ngayHetHan" Type="nvarchar" MaxLength="50" />
+          <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="LICHLAM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="manv" Type="nvarchar" MaxLength="10" />
+          <Property Name="caLam" Type="nvarchar" MaxLength="10" />
+          <Property Name="ngayLam" Type="nvarchar" MaxLength="50" />
+          <Property Name="trangThai" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MENU">
+          <Key>
+            <PropertyRef Name="maMon" />
+          </Key>
+          <Property Name="maMon" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="tenMon" Type="nvarchar" MaxLength="50" />
+          <Property Name="gia" Type="float" />
+        </EntityType>
+        <EntityType Name="NHANVIEN">
+          <Key>
+            <PropertyRef Name="manv" />
+          </Key>
+          <Property Name="manv" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="tenNV" Type="nvarchar" MaxLength="20" />
+          <Property Name="sdt" Type="nvarchar" MaxLength="11" />
+          <Property Name="gioiTinh" Type="nvarchar" MaxLength="4" />
+          <Property Name="vitrilam" Type="nvarchar" MaxLength="50" />
+          <Property Name="diaChi" Type="nvarchar" MaxLength="50" />
+          <Property Name="chucVu" Type="nvarchar" MaxLength="50" />
+          <Property Name="matKhau" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK__BILL__maBan__3F466844">
+          <End Role="BAN" Type="Self.BAN" Multiplicity="0..1" />
+          <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BAN">
+              <PropertyRef Name="maBan" />
+            </Principal>
+            <Dependent Role="BILL">
+              <PropertyRef Name="maBan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BILL__maMon__403A8C7D">
+          <End Role="MENU" Type="Self.MENU" Multiplicity="0..1" />
+          <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENU">
+              <PropertyRef Name="maMon" />
+            </Principal>
+            <Dependent Role="BILL">
+              <PropertyRef Name="maMon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LICHLAM__manv__4316F928">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="LICHLAM" Type="Self.LICHLAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="manv" />
+            </Principal>
+            <Dependent Role="LICHLAM">
+              <PropertyRef Name="manv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DU_AN_1ModelStoreContainer">
+          <EntitySet Name="BAN" EntityType="Self.BAN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BILL" EntityType="Self.BILL" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KHO" EntityType="Self.KHO" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="LICHLAM" EntityType="Self.LICHLAM" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__BILL__maBan__3F466844" Association="Self.FK__BILL__maBan__3F466844">
+            <End Role="BAN" EntitySet="BAN" />
+            <End Role="BILL" EntitySet="BILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BILL__maMon__403A8C7D" Association="Self.FK__BILL__maMon__403A8C7D">
+            <End Role="MENU" EntitySet="MENU" />
+            <End Role="BILL" EntitySet="BILL" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LICHLAM__manv__4316F928" Association="Self.FK__LICHLAM__manv__4316F928">
+            <End Role="NHANVIEN" EntitySet="NHANVIEN" />
+            <End Role="LICHLAM" EntitySet="LICHLAM" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DU_AN_1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="BAN">
+          <Key>
+            <PropertyRef Name="maBan" />
+          </Key>
+          <Property Name="maBan" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="BILLs" Relationship="Self.FK__BILL__maBan__3F466844" FromRole="BAN" ToRole="BILL" />
+        </EntityType>
+        <EntityType Name="BILL">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="maBan" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="maMon" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="soluong" Type="Int32" />
+          <NavigationProperty Name="BAN" Relationship="Self.FK__BILL__maBan__3F466844" FromRole="BILL" ToRole="BAN" />
+          <NavigationProperty Name="MENU" Relationship="Self.FK__BILL__maMon__403A8C7D" FromRole="BILL" ToRole="MENU" />
+        </EntityType>
+        <EntityType Name="KHO">
+          <Key>
+            <PropertyRef Name="maNL" />
+          </Key>
+          <Property Name="maNL" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tenNL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="soluong" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="gia" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="ngayNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ngayHetHan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ghichu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="LICHLAM">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="manv" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="caLam" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ngayLam" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="trangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="NHANVIEN" Relationship="Self.FK__LICHLAM__manv__4316F928" FromRole="LICHLAM" ToRole="NHANVIEN" />
+        </EntityType>
+        <EntityType Name="MENU">
+          <Key>
+            <PropertyRef Name="maMon" />
+          </Key>
+          <Property Name="maMon" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tenMon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="gia" Type="Double" />
+          <NavigationProperty Name="BILLs" Relationship="Self.FK__BILL__maMon__403A8C7D" FromRole="MENU" ToRole="BILL" />
+        </EntityType>
+        <EntityType Name="NHANVIEN">
+          <Key>
+            <PropertyRef Name="manv" />
+          </Key>
+          <Property Name="manv" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="tenNV" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="sdt" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+          <Property Name="gioiTinh" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+          <Property Name="vitrilam" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="diaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="chucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="matKhau" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="LICHLAMs" Relationship="Self.FK__LICHLAM__manv__4316F928" FromRole="NHANVIEN" ToRole="LICHLAM" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK__BILL__maBan__3F466844">
+          <End Role="BAN" Type="Self.BAN" Multiplicity="0..1" />
+          <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="BAN">
+              <PropertyRef Name="maBan" />
+            </Principal>
+            <Dependent Role="BILL">
+              <PropertyRef Name="maBan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__BILL__maMon__403A8C7D">
+          <End Role="MENU" Type="Self.MENU" Multiplicity="0..1" />
+          <End Role="BILL" Type="Self.BILL" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MENU">
+              <PropertyRef Name="maMon" />
+            </Principal>
+            <Dependent Role="BILL">
+              <PropertyRef Name="maMon" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__LICHLAM__manv__4316F928">
+          <End Role="NHANVIEN" Type="Self.NHANVIEN" Multiplicity="0..1" />
+          <End Role="LICHLAM" Type="Self.LICHLAM" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="NHANVIEN">
+              <PropertyRef Name="manv" />
+            </Principal>
+            <Dependent Role="LICHLAM">
+              <PropertyRef Name="manv" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="duan1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="BANs" EntityType="Self.BAN" />
+          <EntitySet Name="BILLs" EntityType="Self.BILL" />
+          <EntitySet Name="KHOes" EntityType="Self.KHO" />
+          <EntitySet Name="LICHLAMs" EntityType="Self.LICHLAM" />
+          <EntitySet Name="MENUs" EntityType="Self.MENU" />
+          <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK__BILL__maBan__3F466844" Association="Self.FK__BILL__maBan__3F466844">
+            <End Role="BAN" EntitySet="BANs" />
+            <End Role="BILL" EntitySet="BILLs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__BILL__maMon__403A8C7D" Association="Self.FK__BILL__maMon__403A8C7D">
+            <End Role="MENU" EntitySet="MENUs" />
+            <End Role="BILL" EntitySet="BILLs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__LICHLAM__manv__4316F928" Association="Self.FK__LICHLAM__manv__4316F928">
+            <End Role="NHANVIEN" EntitySet="NHANVIENs" />
+            <End Role="LICHLAM" EntitySet="LICHLAMs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DU_AN_1ModelStoreContainer" CdmEntityContainer="duan1">
+          <EntitySetMapping Name="BANs">
+            <EntityTypeMapping TypeName="DU_AN_1Model.BAN">
+              <MappingFragment StoreEntitySet="BAN">
+                <ScalarProperty Name="maBan" ColumnName="maBan" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BILLs">
+            <EntityTypeMapping TypeName="DU_AN_1Model.BILL">
+              <MappingFragment StoreEntitySet="BILL">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="maBan" ColumnName="maBan" />
+                <ScalarProperty Name="maMon" ColumnName="maMon" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KHOes">
+            <EntityTypeMapping TypeName="DU_AN_1Model.KHO">
+              <MappingFragment StoreEntitySet="KHO">
+                <ScalarProperty Name="maNL" ColumnName="maNL" />
+                <ScalarProperty Name="tenNL" ColumnName="tenNL" />
+                <ScalarProperty Name="soluong" ColumnName="soluong" />
+                <ScalarProperty Name="gia" ColumnName="gia" />
+                <ScalarProperty Name="ngayNhap" ColumnName="ngayNhap" />
+                <ScalarProperty Name="ngayHetHan" ColumnName="ngayHetHan" />
+                <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="LICHLAMs">
+            <EntityTypeMapping TypeName="DU_AN_1Model.LICHLAM">
+              <MappingFragment StoreEntitySet="LICHLAM">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="manv" ColumnName="manv" />
+                <ScalarProperty Name="caLam" ColumnName="caLam" />
+                <ScalarProperty Name="ngayLam" ColumnName="ngayLam" />
+                <ScalarProperty Name="trangThai" ColumnName="trangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MENUs">
+            <EntityTypeMapping TypeName="DU_AN_1Model.MENU">
+              <MappingFragment StoreEntitySet="MENU">
+                <ScalarProperty Name="maMon" ColumnName="maMon" />
+                <ScalarProperty Name="tenMon" ColumnName="tenMon" />
+                <ScalarProperty Name="gia" ColumnName="gia" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="NHANVIENs">
+            <EntityTypeMapping TypeName="DU_AN_1Model.NHANVIEN">
+              <MappingFragment StoreEntitySet="NHANVIEN">
+                <ScalarProperty Name="manv" ColumnName="manv" />
+                <ScalarProperty Name="tenNV" ColumnName="tenNV" />
+                <ScalarProperty Name="sdt" ColumnName="sdt" />
+                <ScalarProperty Name="gioiTinh" ColumnName="gioiTinh" />
+                <ScalarProperty Name="vitrilam" ColumnName="vitrilam" />
+                <ScalarProperty Name="diaChi" ColumnName="diaChi" />
+                <ScalarProperty Name="chucVu" ColumnName="chucVu" />
+                <ScalarProperty Name="matKhau" ColumnName="matKhau" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DU_AN_1Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

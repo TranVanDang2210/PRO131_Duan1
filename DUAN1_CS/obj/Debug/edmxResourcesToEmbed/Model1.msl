@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DU_AN_1ModelStoreContainer" CdmEntityContainer="duan1">
+    <EntitySetMapping Name="BANs">
+      <EntityTypeMapping TypeName="DU_AN_1Model.BAN">
+        <MappingFragment StoreEntitySet="BAN">
+          <ScalarProperty Name="maBan" ColumnName="maBan" />
+          <ScalarProperty Name="mon" ColumnName="mon" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KHOes">
+      <EntityTypeMapping TypeName="DU_AN_1Model.KHO">
+        <MappingFragment StoreEntitySet="KHO">
+          <ScalarProperty Name="maNL" ColumnName="maNL" />
+          <ScalarProperty Name="tenNL" ColumnName="tenNL" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="gia" ColumnName="gia" />
+          <ScalarProperty Name="ngayNhap" ColumnName="ngayNhap" />
+          <ScalarProperty Name="ngayHetHan" ColumnName="ngayHetHan" />
+          <ScalarProperty Name="ghichu" ColumnName="ghichu" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MENUs">
+      <EntityTypeMapping TypeName="DU_AN_1Model.MENU">
+        <MappingFragment StoreEntitySet="MENU">
+          <ScalarProperty Name="maMon" ColumnName="maMon" />
+          <ScalarProperty Name="tenMon" ColumnName="tenMon" />
+          <ScalarProperty Name="gia" ColumnName="gia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NHANVIENs">
+      <EntityTypeMapping TypeName="DU_AN_1Model.NHANVIEN">
+        <MappingFragment StoreEntitySet="NHANVIEN">
+          <ScalarProperty Name="manv" ColumnName="manv" />
+          <ScalarProperty Name="tenNV" ColumnName="tenNV" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="gioiTinh" ColumnName="gioiTinh" />
+          <ScalarProperty Name="vitrilam" ColumnName="vitrilam" />
+          <ScalarProperty Name="diaChi" ColumnName="diaChi" />
+          <ScalarProperty Name="chucVu" ColumnName="chucVu" />
+          <ScalarProperty Name="matKhau" ColumnName="matKhau" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

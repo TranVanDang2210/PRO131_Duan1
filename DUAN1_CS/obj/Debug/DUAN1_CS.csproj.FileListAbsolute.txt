@@ -1,0 +1,54 @@
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\DUAN1_CS.exe.config
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\DUAN1_CS.exe
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\DUAN1_CS.pdb
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.csproj.AssemblyReference.cache
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.csproj.SuggestedBindingRedirects.cache
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_dangnhap.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_home.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.Properties.Resources.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.csproj.GenerateResource.cache
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.csproj.CoreCompileInputs.cache
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.exe
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.pdb
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_qlnv.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_qltk.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\EntityFramework.dll
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\EntityFramework.SqlServer.dll
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\EntityFramework.xml
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\EntityFramework.SqlServer.xml
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_baocaokho.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_qlmenu.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_tinhtien.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_order.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_dsmon.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_baocaocuoingay.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.csproj.CopyComplete
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\DUAN1_CS.exe.config
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\DUAN1_CS.exe
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\DUAN1_CS.pdb
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\EntityFramework.dll
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\EntityFramework.xml
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.csproj.AssemblyReference.cache
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.csproj.SuggestedBindingRedirects.cache
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_dangnhap.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_baocaokho.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_home.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_qlnv.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_qltk.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_qlmenu.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_tinhtien.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_order.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_dsmon.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_baocaocuoingay.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.Properties.Resources.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.csproj.GenerateResource.cache
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.csproj.CoreCompileInputs.cache
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.csproj.CopyComplete
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.exe
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.pdb
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_qlll.resources
+C:\Users\hoang\OneDrive\Máy tính\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_dkll.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_qlll.resources
+D:\FPT Polytechnic\Dự án 1\RESOURCES\DUAN1_CS\DUAN1_CS\obj\Debug\DUAN1_CS.form_dkll.resources

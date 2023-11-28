@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DU_AN_1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BAN">
+    <Key>
+      <PropertyRef Name="maBan" />
+    </Key>
+    <Property Name="maBan" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="mon" Type="nvarchar" MaxLength="10" />
+    <Property Name="soluong" Type="int" />
+  </EntityType>
+  <EntityType Name="KHO">
+    <Key>
+      <PropertyRef Name="maNL" />
+    </Key>
+    <Property Name="maNL" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenNL" Type="nvarchar" MaxLength="50" />
+    <Property Name="soluong" Type="float" />
+    <Property Name="gia" Type="nvarchar" MaxLength="20" />
+    <Property Name="ngayNhap" Type="nvarchar" MaxLength="50" />
+    <Property Name="ngayHetHan" Type="nvarchar" MaxLength="50" />
+    <Property Name="ghichu" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MENU">
+    <Key>
+      <PropertyRef Name="maMon" />
+    </Key>
+    <Property Name="maMon" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenMon" Type="nvarchar" MaxLength="50" />
+    <Property Name="gia" Type="float" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="manv" />
+    </Key>
+    <Property Name="manv" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenNV" Type="nvarchar" MaxLength="20" />
+    <Property Name="sdt" Type="nvarchar" MaxLength="11" />
+    <Property Name="gioiTinh" Type="nvarchar" MaxLength="4" />
+    <Property Name="vitrilam" Type="nvarchar" MaxLength="50" />
+    <Property Name="diaChi" Type="nvarchar" MaxLength="50" />
+    <Property Name="chucVu" Type="nvarchar" MaxLength="50" />
+    <Property Name="matKhau" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__BAN__mon__3D5E1FD2">
+    <End Role="MENU" Type="Self.MENU" Multiplicity="0..1" />
+    <End Role="BAN" Type="Self.BAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MENU">
+        <PropertyRef Name="maMon" />
+      </Principal>
+      <Dependent Role="BAN">
+        <PropertyRef Name="mon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DU_AN_1ModelStoreContainer">
+    <EntitySet Name="BAN" EntityType="Self.BAN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHO" EntityType="Self.KHO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MENU" EntityType="Self.MENU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NHANVIEN" EntityType="Self.NHANVIEN" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BAN__mon__3D5E1FD2" Association="Self.FK__BAN__mon__3D5E1FD2">
+      <End Role="MENU" EntitySet="MENU" />
+      <End Role="BAN" EntitySet="BAN" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DU_AN_1DataSet2" targetNamespace="http://tempuri.org/DU_AN_1DataSet2.xsd" xmlns:mstns="http://tempuri.org/DU_AN_1DataSet2.xsd" xmlns="http://tempuri.org/DU_AN_1DataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="DU_AN_1ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DU_AN_1ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.DUAN1_CS.Properties.Settings.GlobalReference.Default.DU_AN_1ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="BILLTableAdapter" GeneratorDataComponentClassName="BILLTableAdapter" Name="BILL" UserDataComponentName="BILLTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DU_AN_1ConnectionString (Settings)" DbObjectName="DU_AN_1.dbo.BILL" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT maMon FROM dbo.BILL</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="maMon" DataSetColumn="maMon" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DU_AN_1DataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="DU_AN_1DataSet2" msprop:Generator_DataSetName="DU_AN_1DataSet2">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BILL" msprop:Generator_RowEvHandlerName="BILLRowChangeEventHandler" msprop:Generator_RowDeletedName="BILLRowDeleted" msprop:Generator_RowDeletingName="BILLRowDeleting" msprop:Generator_RowEvArgName="BILLRowChangeEvent" msprop:Generator_TablePropName="BILL" msprop:Generator_RowChangedName="BILLRowChanged" msprop:Generator_RowChangingName="BILLRowChanging" msprop:Generator_TableClassName="BILLDataTable" msprop:Generator_RowClassName="BILLRow" msprop:Generator_TableVarName="tableBILL" msprop:Generator_UserTableName="BILL">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="maMon" msprop:Generator_ColumnPropNameInRow="maMon" msprop:Generator_ColumnPropNameInTable="maMonColumn" msprop:Generator_ColumnVarNameInTable="columnmaMon" msprop:Generator_UserColumnName="maMon" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

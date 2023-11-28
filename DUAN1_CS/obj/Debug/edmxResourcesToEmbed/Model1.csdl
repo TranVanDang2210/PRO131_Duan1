@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DU_AN_1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BAN">
+    <Key>
+      <PropertyRef Name="maBan" />
+    </Key>
+    <Property Name="maBan" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mon" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="soluong" Type="Int32" />
+    <NavigationProperty Name="MENU" Relationship="Self.FK__BAN__mon__3D5E1FD2" FromRole="BAN" ToRole="MENU" />
+  </EntityType>
+  <EntityType Name="KHO">
+    <Key>
+      <PropertyRef Name="maNL" />
+    </Key>
+    <Property Name="maNL" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tenNL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="soluong" Type="Double" />
+    <Property Name="gia" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ngayNhap" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ngayHetHan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ghichu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MENU">
+    <Key>
+      <PropertyRef Name="maMon" />
+    </Key>
+    <Property Name="maMon" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tenMon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="gia" Type="Double" />
+    <NavigationProperty Name="BANs" Relationship="Self.FK__BAN__mon__3D5E1FD2" FromRole="MENU" ToRole="BAN" />
+  </EntityType>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="manv" />
+    </Key>
+    <Property Name="manv" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="tenNV" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="sdt" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="gioiTinh" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="vitrilam" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="diaChi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="chucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="matKhau" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__BAN__mon__3D5E1FD2">
+    <End Role="MENU" Type="Self.MENU" Multiplicity="0..1" />
+    <End Role="BAN" Type="Self.BAN" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MENU">
+        <PropertyRef Name="maMon" />
+      </Principal>
+      <Dependent Role="BAN">
+        <PropertyRef Name="mon" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="duan1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BANs" EntityType="Self.BAN" />
+    <EntitySet Name="KHOes" EntityType="Self.KHO" />
+    <EntitySet Name="MENUs" EntityType="Self.MENU" />
+    <EntitySet Name="NHANVIENs" EntityType="Self.NHANVIEN" />
+    <AssociationSet Name="FK__BAN__mon__3D5E1FD2" Association="Self.FK__BAN__mon__3D5E1FD2">
+      <End Role="MENU" EntitySet="MENUs" />
+      <End Role="BAN" EntitySet="BANs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
